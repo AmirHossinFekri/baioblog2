@@ -1,0 +1,34 @@
+<%- include("./imports/header")  %>
+<style>
+    body{
+        background-color: #dcd8d8;
+    }
+</style>
+
+
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="w-25">
+        <div class="text-center mb-4" ><span style="font-size: 60px;" >ثبت نام</span></div>
+        <form action="" method="post" class="shadow rounded border p-3 bg-light">
+            <div class="mb-3">
+              <label for="fullname" class="form-label">نام کاربری</label>
+              <input type="text" class="form-control" name="username" id="fullname">
+            </div>
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">ایمیل</label>
+                <input type="email" name="email" class="form-control" id="emailInput">
+              </div>
+            <div class="mb-3">
+              <label for="passwordInput" class="form-label">رمز عبور</label>
+              <input type="password" name="password" class="form-control" id="passwordInput">
+            </div>
+            <div class="mb-3">
+                <label for="passwordConfrimInput" class="form-label">تایید رمز عبور</label>
+                <input type="password" name="passwordConfrim" class="form-control" id="passwordConfrimInput">
+              </div>
+            <button type="submit" class="btn btn-primary">  <i class="fa fa-key"></i> ثبت نام</button>
+        </form>
+    </div>
+</div>
+
+<%- include("./imports/footer")  %>

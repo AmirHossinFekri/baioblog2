@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'yekan'; 
+    src: url('../fonts/BYekan+.ttf');
+}
+
+#myfont{
+    font-family: yekan;
+}
+
+html,body,*{
+    font-family: yekan;
+}
+html,body{
+    min-height: 100%;
+    height: 100%;
+}
