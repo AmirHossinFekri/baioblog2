@@ -1,13 +1,15 @@
-<style>
-    body{
-        background-color: #dcd8d8;
-    }
-</style>
 
+<%- include("./imports/header")  %>
+<style>
+  body{
+      background-color: #dcd8d8;
+  }
+</style>
 <div class="h-100  d-flex align-items-center justify-content-center">
-    <div class="w-25">
-        <div class="text-center mb-4" ><span style="font-size: 60px;" >ورود</span></div>
-        <form method="post" action="./register" class="shadow rounded border p-3 bg-light">
+  <div class="w-25">
+    <%- include('./includes/msg') %>
+    <div class="text-center mb-4" ><span style="font-size: 60px;" >ورود</span></div>
+        <form method="post" action="./login" class="shadow rounded border p-3 bg-light">
             <div class="mb-3">
                 <label for="emailInput" class="form-label">ایمیل</label>
                 <input type="email" name="email" class="form-control" id="emailInput">
@@ -24,3 +26,4 @@
         </form>
     </div>
 </div>
+<%- include("./imports/footer")  %>

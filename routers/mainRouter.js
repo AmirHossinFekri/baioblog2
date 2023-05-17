@@ -1,19 +1,28 @@
 import { Router } from "express";
-import { getRegisterPage, registerHandeler } from "../controllers/mainController.js";
+import { LoginHandler, getLoginPage, getRegisterPage, registerHandeler } from "../controllers/mainController.js";
 
 
 const temp=Router();
 
 //?-------------GET------------------------
+//* Route : /
 temp.get("/" ,(req,res)=>{
     res.render("index",{pageTitle:"تلاش دوم برای یادگیری node js"});
 });
 
+//* Route : /register
 temp.get("/register" , getRegisterPage);
+
+//* Route : /login
+temp.get("/login",getLoginPage);
 //?----------------------------------------
 
 //!------------POST------------------------
-temp.post("/register", registerHandeler)
+//* Route: /register 
+temp.post("/register", registerHandeler);
+
+//* Route: /login
+temp.post("/login",LoginHandler);
 //!----------------------------------------
 
 
