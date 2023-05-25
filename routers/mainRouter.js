@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { LoginHandler, getLoginPage, getRegisterPage, registerHandeler } from "../controllers/mainController.js";
+import { LoginHandler, getLoginPage, getRegisterPage, registerHandeler, rememberMe } from "../controllers/mainController.js";
 
 
 const temp=Router();
@@ -22,7 +22,7 @@ temp.get("/login",getLoginPage);
 temp.post("/register", registerHandeler);
 
 //* Route: /login
-temp.post("/login",LoginHandler);
+temp.post("/login",LoginHandler,rememberMe);
 //!----------------------------------------
 
 

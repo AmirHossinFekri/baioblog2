@@ -46,8 +46,20 @@ export const registerHandeler=async(req,res) =>{
 //?------/login-----
 export const LoginHandler=(req,res,next)=>{
     passport.authenticate("local",{
-        successRedirect:'/user',
+        // successRedirect:'/user',
         failureRedirect:'/login',
         failureFlash:true
     })(req,res,next)
+}
+
+export const rememberMe=(req,res)=>{
+
+    console.log(req.body.rememberMe);
+    if(req.body.rememberMe)
+        {
+            req.session.cookie.originalMaxAge=24*60*60*1000; //24h
+        }else{
+            req.session.cookie.originalMaxAge=null;
+        }
+    res.redirect("/user")
 }

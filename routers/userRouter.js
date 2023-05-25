@@ -1,16 +1,16 @@
 import { Router } from "express";
 
-import { getDashoard } from "../controllers/userController.js";
+import { getDashoard, logout } from "../controllers/userController.js";
+import { auth } from "../middleware/auth.js";
 
 const temp=Router();
 
 
 //?-----------GET-------------
-temp.get('/',getDashoard);
+temp.get('/',auth,getDashoard);
 
-
+temp.get('/logout',auth,logout);
 //!----------POST-------------
-
 
 
 export const userRouter=temp;
